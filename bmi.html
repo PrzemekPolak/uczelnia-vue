@@ -25,13 +25,14 @@
         Vue.createApp({
             data() {
                 return {
-                    wzrost: 175.0,
-                    waga: 70.0,
+                    wzrost: 175,
+                    waga: 70,
                 }
             },
             computed: {
                 calcbmi: function() {
-                    bmi = this.waga / ((this.wzrost/100)^2)
+                    wzr = this.wzrost/100
+                    bmi = this.waga / (wzr*wzr)
                     return bmi
                 }
             }
