@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="paragon">
+            <h3 style="margin: 0px;">RECEIPT</h3>
+            <p style="margin: 0px;">-----------------------------<br>Product: {{Product}}<br>Unit Price: {{Unit_Price}} zł<br>Quantity: {{Quantity}}<br>Amount: {{Amount}} zł<br>VAT Tax Rate: {{VAT_Tax_Rate}}%<br>=================</p>
+            <h3 style="margin: 0px;">Total: {{Total}} zł</h3>
+            
+        </div>
+
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    Product: 'book',
+                    Unit_Price: 17,
+                    Quantity: 3,
+                    Amount: 51,
+                    VAT_Tax_Rate: 23,
+                    Total: 62.73
+                }
+            },           
+        }) .mount('#app')
+    </script>
+</body>
+</html>

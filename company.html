@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="wizytowka" style="border: solid;width: 260px;text-align: center;padding: 20px;">
+            <h3 style="margin: 0px;">{{firma}}</h3>
+            <p style="margin: 0px;">{{ulica}}<br>{{miasto}}<br>{{telefon}}</p>
+            <a :href="link">{{link}}</a>
+        </div>
+
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    firma: 'UNIKPOL S.A.',
+                    ulica: 'ul. Ukryta 5',
+                    miasto: '02-114 Rawa Mazowiecka',
+                    telefon: 'tel. 22 345 90 21, 888 213 992',
+                    link: 'http://www.unikpol.pl',
+                }
+            },           
+        }) .mount('#app')
+    </script>
+</body>
+</html>

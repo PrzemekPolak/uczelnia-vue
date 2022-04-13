@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="book">
+            <h3>Wprowadź książkę:</h3>
+            <label>Tytuł:</label>
+            <input type="text" v-model="title">
+            <label>Imię:</label>
+            <input type="text" v-model="name">
+            <label>Nazwisko:</label>
+            <input type="text" v-model="surname">
+            <button @click="formsend()">Zapisz</button>
+        </div>
+
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    title: '',
+                    name: '',
+                    surname: ''
+                }
+            },
+            methods: {
+                formsend() {
+                    console.log('Dane z formularza:')
+                    console.log('Tytuł:' + this.title)
+                    console.log('Imię:' + this.name)
+                    console.log('Nazwisko:' + this.surname)
+                }
+            }          
+        }) .mount('#app')
+    </script>
+</body>
+</html>

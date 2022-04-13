@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="todolist">
+            <div>DO WYKONANIA:</div>
+            <ol style="margin: 0px; padding-left: 15px;">
+                <li v-for="todo in zadania"> {{todo}}</li>
+            </ol>
+        </div>
+
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    zadania: [
+                        'Kup mleko',
+                        'Kup chleb',
+                        'Zrób coś nr 3',
+                        'Zrób coś nr 4',
+                    ]
+                }
+            },           
+        }) .mount('#app')
+    </script>
+</body>
+</html>
